@@ -1,0 +1,79 @@
+<!--
+  Generated template for the WeatherPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Weather</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content">
+  <div class="content__addCity">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>City</ion-label>
+        <ion-input type="text" #newCity  [(ngModel)]="cityName"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <button block ion-button (click)="addCity()">Add City</button>
+    </div>
+  </div>
+
+
+  <div  *ngIf="!!weatherDefault">
+    <div class="content__weather">
+      <ion-card>
+        <h1>
+          {{weatherDefault.location.name}}
+        </h1>
+
+        <div class="content__condition">
+          <h2>
+            {{weatherDefault.current.condition.text}}
+          </h2>
+          <img src="{{weatherDefault.current.condition.icon}}">
+        </div>
+        <ion-card-content>
+          <div>
+            <p>Temp_C: {{weatherDefault.current.temp_c}}</p>
+            <p>Humidity: {{weatherDefault.current.humidity}} </p>
+            <p>Windy: {{weatherDefault.current.wind_kph}} kph </p>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+    </div>
+
+  </div>
+
+
+  <div ion-item *ngFor="let city of weatherAll" class="content__allCity" >
+    <ion-card>
+      <h1>
+        {{city.location.name}}
+      </h1>
+
+      <div class="content__condition">
+        <h2>
+          {{city.current.condition.text}}
+        </h2>
+        <img src="{{city.current.condition.icon}}" class="content__condition_sm-img">
+      </div>
+      <ion-card-content>
+        <div>
+          <p>Temp_C: {{city.current.temp_c}}</p>
+          <p>Humidity: {{city.current.humidity}} </p>
+          <p>Windy: {{city.current.wind_kph}} kph </p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+

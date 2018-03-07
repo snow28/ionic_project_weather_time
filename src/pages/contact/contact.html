@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="send-message">
+    <ion-list-header class="send-message__header">Contact me:</ion-list-header>
+    <ion-item>
+      <ion-label floating>Your name:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Message</ion-label>
+      <ion-textarea class="send-message__textarea"></ion-textarea>
+    </ion-item>
+    <div class="send-message__send">
+      <button ion-button color="primary" (click)="sendMessage()">Send</button>
+    </div>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>Social networks</ion-list-header>
+    <ion-item>
+      <ion-icon name="logo-facebook" item-start></ion-icon>
+      <a href="https://www.facebook.com/mustafaenes.arslan.1">Facebook</a>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="logo-google" item-start></ion-icon>
+      <a href="#">Google</a>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="logo-linkedin" item-start></ion-icon>
+      <a href="#">Linkedin</a>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="mail" item-start></ion-icon>
+      <a>myEmail@gmail.com</a>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

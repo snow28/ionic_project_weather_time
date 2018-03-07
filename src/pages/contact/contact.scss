@@ -1,0 +1,21 @@
+page-contact {
+  .send-message{
+    &__header{
+      margin-bottom: 0;
+      font-size: 25px;
+      font-weight: bold;
+      text-align: center;
+    }
+    &__send{
+      text-align: center;
+      margin-top: 10px;
+      button{
+        min-width: 100px;
+        margin-bottom: 15px;
+      }
+    }
+    &__textarea{
+      min-height: 75px;
+    }
+  }
+}

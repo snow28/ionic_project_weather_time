@@ -1,0 +1,29 @@
+page-time {
+  .time{
+    &__add{
+      display: flex;
+    }
+    &__cityInput{
+      width: 50%;
+    }
+    &__addButton{
+      width: 50%;
+    }
+    &__card{
+      h1{
+        text-align: center;
+        font-size: 35px;
+      }
+      h2{
+        text-align: center;
+        font-size: 23px;
+      }
+      p{
+        text-align: center;
+        span{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+page-weather {
+  .content{
+    &__weather{
+      h1{
+        text-align: center;
+        font-size: 35px;
+      }
+
+      ion-card-content{
+        div{
+          display: flex;
+          width: 98%;
+          margin: auto;
+        }
+        p{
+          margin-left: 15px;
+        }
+      }
+    }
+    &__condition{
+      display: flex;
+      height: 50px;
+      margin: auto;
+      width: 50%;
+      text-align: center;
+      &_sm-img{
+        position: relative;
+        left: -10px;
+      }
+      h2{
+        line-height: 50px;
+        text-align: center;
+        margin: auto;
+      }
+      img{
+        margin: auto;
+        width: 50px;
+      }
+    }
+    &__allCity{
+      h1{
+        text-align: center;
+      }
+      ion-card-content{
+        div{
+          display: flex;
+          margin: auto;
+        }
+        p{
+          margin-left: 10px;
+        }
+      }
+    }
+    &__addCity{
+      width: 100%;
+      padding-left: 5%;
+      display: -webkit-inline-box;
+    }
+  }
+}
